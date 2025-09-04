@@ -41,17 +41,19 @@ configure<BukkitPluginDescription> {
     apiVersion = "1." + pluginVersion.split(".")[1]
     author = "ringoame196_s_mcPlugin"
     website = "https://github.com/ringoame196-s-mcPlugin"
-    /*
-    コマンド追加用
+
     commands {
-        register("test") {
-            description = "This is a test command!"
-            aliases = listOf("t")
-            permission = "testplugin.test"
-            usage = "Just run the command!"
+        register("money") {
+            description = "Moneyプラグイン用のコマンド"
+            usage = "/money <pay,show,log> [<ターゲット>] [<金額>]"
+        }
+
+        register("moneymanager") {
+            description = "Moneyプラグイン用の管理コマンド"
+            permission = "op"
+            usage = "/moneymanager <add,remove,display> <ターゲット> [<金額>]"
         }
     }
-    */
 }
 
 tasks.withType<ShadowJar> {
